@@ -12,6 +12,15 @@ class BillService {
     getBillById(billId){
         return axios.post(CONSUMER_API_BASE_URL + '/getBillById' , billId);
     }
+  createBill(bill){
+        return axios.post(CONSUMER_API_BASE_URL + '/createNewBill' , bill);
+    }
+   getAllBills(bill){
+        return axios.get(CONSUMER_API_BASE_URL + '/getAllBills' , bill);
+    }
+   deleteBillById(billId){
+        return axios.delete(CONSUMER_API_BASE_URL + '/deleteBillById' , billId);
+    }
     
     }
    
