@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const CONSUMER_API_BASE_URL = "http://ec2-54-163-61-125.compute-1.amazonaws.com:8081";
+const CONSUMER_API_BASE_URL = "http://ec2-54-167-249-113.compute-1.amazonaws.com:8081";
 
 class BillService {
 
