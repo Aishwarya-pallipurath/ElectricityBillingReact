@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-const customer_base_url="http://http://ec2-54-91-121-58.compute-1.amazonaws.com:8081/api/supervisor"
-const LOGIN_API_BASE_URL="http://http://ec2-54-91-121-58.compute-1.amazonaws.com:8081/api/supervisor";
+const customer_base_url="http://ec2-54-91-121-58.compute-1.amazonaws.com:8081/api/supervisor"
+const LOGIN_API_BASE_URL="http://ec2-54-91-121-58.compute-1.amazonaws.com:8081/api/supervisor";
 class SupervisorService extends React.Component{
    
         login(supervisor){
