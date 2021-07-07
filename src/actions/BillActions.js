@@ -2,7 +2,7 @@ import axios from 'axios';
 import { GET_ERRORS,GET_BILLS,GET_BILL,DELETE_BILL } from './type';
 export const createBill=(bill,history)=>async dispatch=> {
     try {
-        const res =await axios.post ("http://ec2-54-163-61-125.compute-1.amazonaws.com:8081/createNewBill",bill)
+        const res =await axios.post ("http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/createNewBill",bill)
         history.push("/BillDashboard");
     } catch (error) {
         dispatch({
@@ -11,7 +11,9 @@ export const createBill=(bill,history)=>async dispatch=> {
         })
     }
 }
+
  
+
 export const getBills=()=>async dispatch=>{
     const res=await axios.get("http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/getAllBills");
       dispatch({
@@ -19,7 +21,9 @@ export const getBills=()=>async dispatch=>{
         payload:res.data
     })
 }
+
  
+
 export const getBill=(billId,history)=>async dispatch=>{
     const res=await axios.get(`http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/getBillById/${billId}`);
       dispatch({
@@ -27,7 +31,9 @@ export const getBill=(billId,history)=>async dispatch=>{
         payload:res.data
     })
 }
+
  
+
 export const deleteBill=(billId)=>async dispatch=>{
     if(window.confirm("Are you sure ? This will delete the bill and the data related to it")) {
         await axios.delete(`http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/deleteBillById/${billId}`);
