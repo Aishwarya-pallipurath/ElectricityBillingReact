@@ -4,7 +4,7 @@ import BillService from '../Services/BillService';
 
 export const createBill=(bill,history)=>async dispatch=> {
     try {
-        const res =await BillService.createBill(Bill);
+        const res =await BillService.createBill(bill);
         history.push("/BillDashboard");
     } catch (error) {
         dispatch({
