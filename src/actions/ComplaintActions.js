@@ -2,7 +2,7 @@ import axios from 'axios';
 import { GET_ERRORS,GET_COMPLAINTS,GET_COMPLAINT,DELETE_COMPLAINT } from './type';
 export const createComplaint=(complaint,history)=>async dispatch=> {
     try {
-        const res =await axios.post ("http://localhost:8081/Complaint/InsertComplaint",complaint)
+        const res =await axios.post ("http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/Complaint/InsertComplaint",complaint)
         history.push("/ComplaintDashboard");
     } catch (error) {
         dispatch({
@@ -13,7 +13,7 @@ export const createComplaint=(complaint,history)=>async dispatch=> {
 }
 
 export const getComplaints=()=>async dispatch=>{
-    const res=await axios.get("http://localhost:8081/Complaint/Complaints");
+    const res=await axios.get("http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/Complaint/Complaints");
       dispatch({
         type:GET_COMPLAINTS,
         payload:res.data
@@ -21,7 +21,7 @@ export const getComplaints=()=>async dispatch=>{
 }
 
 export const getComplaint=(complaint_no,history)=>async dispatch=>{
-    const res=await axios.get(`http://localhost:8081/Complaint/GetComplaint/${complaint_no}`);
+    const res=await axios.get(`http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/Complaint/GetComplaint/${complaint_no}`);
       dispatch({
         type:GET_COMPLAINT,
         payload:res.data
@@ -30,7 +30,7 @@ export const getComplaint=(complaint_no,history)=>async dispatch=>{
 
 export const deleteComplaint=(complaint_no)=>async dispatch=>{
     if(window.confirm("Are you sure ? This will delete the bill and the data related to it")) {
-        await axios.delete(`http://localhost:8081/Complaint/DeleteComplaint/${complaint_no}`);
+        await axios.delete(`http://ec2-54-167-249-113.compute-1.amazonaws.com:8081/Complaint/DeleteComplaint/${complaint_no}`);
         dispatch({
             type:DELETE_COMPLAINT,
             payload:complaint_no
