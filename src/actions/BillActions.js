@@ -2,7 +2,7 @@ import axios from 'axios';
 import { GET_ERRORS,GET_BILLS,GET_BILL,DELETE_BILL } from './type';
 export const createBill=(bill,history)=>async dispatch=> {
     try {
-        const res =await axios.post ("http://ec2-54-163-61-125.compute-1.amazonaws.com:8081/createNewBill",bill)
+        const res =await axios.post (`http://ec2-54-163-61-125.compute-1.amazonaws.com:8081/createNewBill`,bill)
         history.push("/BillDashboard");
     } catch (error) {
         dispatch({
@@ -13,7 +13,7 @@ export const createBill=(bill,history)=>async dispatch=> {
 }
  
 export const getBills=()=>async dispatch=>{
-    const res=await axios.get("http://ec2-54-163-61-125.compute-1.amazonaws.com:8081/getAllBills");
+    const res=await axios.get(`http://ec2-54-163-61-125.compute-1.amazonaws.com:8081/getAllBills`);
       dispatch({
         type:GET_BILLS,
         payload:res.data
