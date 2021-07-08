@@ -94,7 +94,7 @@ class AddComplaint extends Component {
                                     )}
                                 </div>
                                 <input type="submit" className="btn btn-primary btn-block mt-5 m-5" />
-                                <Link to="/ThankyouC" className="btn btn-primary btn-block mt-5 m-5">Submit</Link>
+                                
 
                                 <button type="reset" className="btn btn-danger ml-3" onClick={this.cancel}>Cancel</button>
 
