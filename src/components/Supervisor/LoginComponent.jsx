@@ -88,7 +88,7 @@ class LoginComponent extends Component {
 
                     </Card.Body>
                       <Card.Footer style={{ "textAlign": "right" }}>
-                          <div Style="text-align:left"><h6 >Did u forgot your password? <a href="http://localhost:3000/reset" >RESET PASSWORD</a></h6></div>
+                          <div Style="text-align:left"><h6 >Did u forgot your password? <a href="http://ec2-54-175-252-241.compute-1.amazonaws.com:3000/reset" >RESET PASSWORD</a></h6></div>
                         <ButtonGroup  >
                             <center>
                             <Button size="lg" variant="success" type="submit" onClick={this.handleLogin}>
