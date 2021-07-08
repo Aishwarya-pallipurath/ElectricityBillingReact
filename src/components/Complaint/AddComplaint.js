@@ -44,7 +44,7 @@ class AddComplaint extends Component {
             complaint_no: this.state.complaint_no
         }
         console.log(newComplaint);
-        this.props.createComplaint(newComplaint, this.props.history.push('/ThankyouC');
+        this.props.createComplaint(newComplaint, this.props.history.push('/ThankyouC'));
 
     }
     render() {
