@@ -143,7 +143,7 @@ class AddCustomer extends React.Component {
                 
     </Card.Body>
         <Card.Footer style={{ "textAlign": "right" }} >
-            <div Style="text-align:left"><h6 >Already have an account? <a href="http://localhost:3000/CustomerLogin" >Login</a></h6></div>
+            <div Style="text-align:left"><h6 >Already have an account? <a href="http://ec2-54-175-252-241.compute-1.amazonaws.com:3000/CustomerLogin" >Login</a></h6></div>
                         <ButtonGroup>
                             <Button size="lg" variant="success" type="submit" onClick={this.saveCustomer}>
                                 <FontAwesomeIcon icon={faSave}></FontAwesomeIcon> Sign up
