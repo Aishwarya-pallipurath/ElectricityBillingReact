@@ -90,7 +90,7 @@ class CustomerLogin extends Component {
 
                     </Card.Body>
                       <Card.Footer style={{ "textAlign": "right" }}>
-                          <div Style="text-align:left"><h6 >Are you a new User? <a href="http://localhost:3000/add" >Sign up </a> Forgot Password?  <a href="http://localhost:3000/reset-password" >Reset</a></h6></div>
+                          <div Style="text-align:left"><h6 >Are you a new User? <a href="http://ec2-54-175-252-241.compute-1.amazonaws.com:3000/add" >Sign up </a> Forgot Password?  <a href="http://ec2-54-175-252-241.compute-1.amazonaws.com:3000/reset-password" >Reset</a></h6></div>
                        
 
                         <ButtonGroup  >
